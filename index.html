@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pagedemo</title>
+</head>
+<body>
+	<h2>test</h2>
+	<div id="box" style="width:400px;height:200px;"></div>
+</body>
+<script type="text/javascript">
+	const box = document.querySelector('#box');
+	const timer =()=>{
+		setTimeout(()=>{
+			const now = new Date();
+			box.innerHTML = now;
+			timer();
+		},1000)
+	}
+	timer();
+</script>
+
+</html>
